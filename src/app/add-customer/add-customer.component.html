@@ -1,0 +1,27 @@
+<p>add-customer works!</p>
+
+<div class="card" style="width: 18rem;">
+    <form (ngSubmit)="addcustomer(f)" #f = ngForm>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Id: </label>
+        <input type="text" class="form-control" name="id" id="formGroupExampleInput" #name="ngModel" placeholder="id" ngModel>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Name: </label>
+        <input type="text" name="name" class="form-control" id="formGroupExampleInput2" #name="ngModel" placeholder="name" ngModel>
+      </div>
+      <div class="form-group">
+          <label for="formGroupExampleInput">Address: </label>
+          <input type="text" name="address" class="form-control" id="formGroupExampleInput" #name="ngModel" placeholder="address" ngModel>
+        </div>
+        <div class="form-group">
+          <label for="formGroupExampleInput2">Contact: </label>
+          <input type="text" name="contact" class="form-control" id="formGroupExampleInput2" #name="ngModel" placeholder="contact" ngModel>
+        </div>
+  
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-lg btn-block">ADD CUSTOMER</button>
+      </div>
+    </form>
+  </div>
+  

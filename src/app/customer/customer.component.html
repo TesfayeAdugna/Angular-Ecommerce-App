@@ -1,0 +1,14 @@
+<a class="nav-link" [routerLink]="['add-customer']" (click)="customerForm()"> + ADD NEW CUSTOMER</a>
+
+<div class="d-flex flex-wrap">
+<div class="card" style="width: 18rem;" *ngFor="let customer of customerList">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Name: {{customer.name}}</li>
+      <li class="list-group-item">Address: {{customer.address}}</li>
+      <button type="button" class="btn btn-primary" (click)="ViewDetail(customer.id, customer.name, customer.address, customer.contact)">View Customer</button>
+      <button type="button" class="btn btn-primary" (click)="onViewDetail(customer.id, customer.name, customer.address, customer.contact)">Update Customer</button>
+      <button type="button" class="btn btn-danger" (click)="deleteCustomer(customer.id)">Delete Customer</button>
+    </ul>
+  </div>
+  </div>
+

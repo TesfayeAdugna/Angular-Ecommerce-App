@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm" *ngFor="let product of productList">
+        
+        <div class="card" style="width: 18rem;" class="shadoweerr">
+            <img class="card-img-top" src={{product.imageUrl}} alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">{{product.name | uppercase}}</h5>
+            <p class="card-text" *ngIf="product.price < 2000" style="color: red;">${{product.price}} *On Discount</p>
+            <p class="price" *ngIf="product.price>=2000">${{product.price}}</p>
+            <!-- <input [(ngModel)]="product.name" placeholder="name"/> -->
+            <p class="card-text">{{product.description}}</p>
+            <a class="btn btn-primary" (click)="onViewDetail(product.id, product.price, product.name)">View Details</a>
+        </div>
+           </div>
+      </div>
+      </div>
+      </div>
+     
